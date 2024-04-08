@@ -1,0 +1,28 @@
+<div class="container mt-2">
+  <div class="well">
+    <h3 class="text-center">Item List</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th> <!-- New column for actions -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of itemList">
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>
+              <!-- Edit button -->
+              <button type="button" class="btn btn-primary btn-sm " routerLink="/editItem/{{item.id}}">Edit</button>
+              <!-- Delete button -->
+              <button type="button" class="btn btn-danger btn-sm delete-button" (click)="deleteItem(item.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

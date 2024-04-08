@@ -1,0 +1,25 @@
+<div class="container mt-2">
+    <form [formGroup]="itemForm" (ngSubmit)="updateItem()">
+        <div class="row mt-2 justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group mt-3">
+                    <label for="formGroupExampleInput">Name</label>
+                    <input type="text" class="form-control" formControlName="name" id="formGroupExampleInput"
+                        placeholder="Enter Name">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="formGroupExampleInput2">Description</label>
+                    <input type="text" class="form-control" formControlName="description" id="formGroupExampleInput2"
+                        placeholder="Enter Description">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-6">
+                <div class="row d-flex btns">
+                    <button type="submit" class="btn ml-1 mr-1 btn-primary">Update Item</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
